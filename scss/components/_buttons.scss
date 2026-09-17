@@ -1,0 +1,31 @@
+@use '../base/variables' as *;
+
+// ==========================================================================
+// Buttons / CTAs
+// ==========================================================================
+
+.btn {
+  display: inline-block;
+  font-family: $font-body;
+  font-weight: 600;
+  padding: $space-2 $space-4;
+  border: 1px solid $color-ink;
+  border-radius: $radius;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background: $color-ink;
+    color: $color-paper;
+  }
+}
+
+.btn--accent {
+  border-color: $color-accent;
+  color: $color-accent;
+
+  &:hover {
+    background: $color-accent;
+    color: $color-paper;
+  }
+}

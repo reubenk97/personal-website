@@ -1,0 +1,21 @@
+@use '../base/variables' as *;
+
+// ==========================================================================
+// Dashboards — Excel / Power BI / Tableau project cards.
+// Excel: screenshot + writeup. Power BI: "Publish to web" iframe embed.
+// Tableau: Tableau Public iframe embed.
+// ==========================================================================
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $space-4;
+  padding: $space-6 $space-4;
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+.dashboard-card {
+  border: 1px solid $color-line;
+  padding: $space-4;
+}

@@ -1,0 +1,16 @@
+@use '../base/variables' as *;
+
+// ==========================================================================
+// Other projects — Unity/Blender, Line app, future additions.
+// Kept visually distinct from the analyst-highlight sections above it,
+// per the "analyst work leads, full range available below" structure.
+// ==========================================================================
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $space-4;
+  padding: $space-6 $space-4;
+  max-width: $container-width;
+  margin: 0 auto;
+}

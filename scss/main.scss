@@ -1,0 +1,15 @@
+// ==========================================================================
+// Main entry point — compiles to ../css/main.css
+// Order matters: reset/typography first, then components, then sections.
+// ==========================================================================
+
+@use 'base/reset';
+@use 'base/typography';
+
+@use 'components/nav';
+@use 'components/buttons';
+
+@use 'sections/hero';
+@use 'sections/resume';
+@use 'sections/dashboards';
+@use 'sections/projects';

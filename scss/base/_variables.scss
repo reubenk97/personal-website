@@ -1,0 +1,34 @@
+// ==========================================================================
+// Design tokens
+// Placeholder palette/type — revisit once content + full layout are ready.
+// Deliberately steering away from generic "AI portfolio" defaults:
+// no cream+terracotta, no near-black+acid-green, no SaaS-card kit.
+// ==========================================================================
+
+// Color -------------------------------------------------------------------
+$color-ink:        #1B2430; // primary text, near-black but with a blue cast
+$color-paper:      #F4F5F1; // background, cool off-white (not cream)
+$color-accent:     #B8862E; // brass/amber — used sparingly, not a SaaS blue/teal
+$color-line:       #D9D4C7; // hairlines, dividers, borders
+$color-muted:      #5B6470; // secondary text, captions
+
+// Type ----------------------------------------------------------------
+$font-display: "Newsreader", Georgia, serif;      // headlines — carries the personality
+$font-body:    "IBM Plex Sans", -apple-system, sans-serif; // body/UI/data labels
+
+$font-size-base: 1rem;
+$line-height-body: 1.6;
+
+// Spacing (4px base scale) --------------------------------------------
+$space-1: 0.25rem;
+$space-2: 0.5rem;
+$space-3: 1rem;
+$space-4: 1.5rem;
+$space-5: 2.5rem;
+$space-6: 4rem;
+$space-7: 6rem;
+
+// Layout ----------------------------------------------------------------
+$max-line-width: 70ch;   // keeps body copy under the ~80 char guidance
+$container-width: 1100px;
+$radius: 2px;            // sharp, not the rounded-everything SaaS default

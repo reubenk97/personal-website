@@ -1,0 +1,13 @@
+@use '../base/variables' as *;
+
+// ==========================================================================
+// Hero — the recruiter's first impression. Design once real copy exists;
+// see frontend-design guidance: open with the most characteristic thing
+// in the subject's world, not a generic "big number + gradient" default.
+// ==========================================================================
+
+.hero {
+  padding: $space-7 $space-4;
+  max-width: $container-width;
+  margin: 0 auto;
+}

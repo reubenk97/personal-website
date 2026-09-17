@@ -1,0 +1,13 @@
+@use '../base/variables' as *;
+
+// ==========================================================================
+// Nav — fill in once the page structure (sections/anchors) is finalized
+// ==========================================================================
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $space-3 $space-4;
+  border-bottom: 1px solid $color-line;
+}
