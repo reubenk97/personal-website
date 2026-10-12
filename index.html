@@ -19,7 +19,12 @@
   <!-- HERO
        Analyst-focused highlight goes first, per the agreed structure. -->
   <section class="hero" id="home">
-    <!-- placeholder — real hero content next -->
+    <h1>Reuben Kuruvila</h1>
+    <p class="hero-tagline">I turn messy data into decisions &mdash; dashboards in Excel, Power BI, and Tableau, built on a background spanning analytics, tax consulting, and software development.</p>
+    <div class="hero-actions">
+      <a class="btn btn--accent" href="#dashboards">View Dashboards</a>
+      <a class="btn" href="#resume">Resume</a>
+    </div>
   </section>
 
   <!-- RESUME -->
@@ -29,7 +34,25 @@
   <!-- DASHBOARDS: Excel, Power BI, Tableau -->
   <section id="dashboards">
     <div class="dashboard-grid">
-      <!-- one .dashboard-card per project -->
+
+      <article class="dashboard-card">
+        <img src="assets/img/excel-superstore-dashboard.png" alt="Superstore Performance Dashboard in Excel, showing KPI cards, profit by sub-category, quarterly sales trend, and total regional sales">
+        <h3>Superstore Sales Analysis</h3>
+        <p class="text-muted">Excel &middot; 2014&ndash;2017</p>
+        <p><strong>The question:</strong> Which regions and categories were underperforming, where the business was losing profit margin, and what was driving year-over-year sales trends.</p>
+        <p><strong>The approach:</strong> Built an interactive Excel dashboard with slicers for year, region, segment, and category. KPI cards tracked total sales, total profit, profit margin, and order volume, backed by visuals breaking down profit by sub-category, quarterly sales trends, and regional sales totals.</p>
+        <p><strong>The takeaway:</strong> Tables (furniture) was underperforming across nearly every region &mdash; a category-wide problem, not a regional one. The South stood out further: it had the weakest sales overall, and its quarterly trend diverged sharply from the other three regions, pointing to something region-specific worth digging into.</p>
+      </article>
+
+      <article class="dashboard-card">
+        <img src="assets/img/powerbi-hr-attrition.png" alt="Power BI Employee Attrition dashboard, showing KPI cards, attrition by department and age group, and satisfaction/work-life balance breakdowns">
+        <h3>Employee Attrition Analysis</h3>
+        <p class="text-muted">Power BI &middot; IBM HR Analytics</p>
+        <p><strong>The question:</strong> What's driving employee attrition, and where in the organization is it worst.</p>
+        <p><strong>The approach:</strong> Built a Power BI dashboard covering 1,470 employees, with slicers for department, age, gender, and job role. KPI cards tracked high-risk employees, attrition rate, and total attrited employees, backed by visuals breaking down attrition by department, age group, monthly income (active vs. attrited), satisfaction/work-life balance, and tenure.</p>
+        <p><strong>The takeaway:</strong> Sales had the highest attrition rate of any department. Employees under 25 attrited at the highest rate of any age group. And the strongest pattern in the data: attrition was highest specifically where low job satisfaction and poor work-life balance overlapped.</p>
+      </article>
+
     </div>
   </section>
 

@@ -10,4 +10,20 @@
   padding: $space-7 $space-4;
   max-width: $container-width;
   margin: 0 auto;
+
+  h1 {
+    margin-bottom: $space-3;
+  }
+}
+
+.hero-tagline {
+  max-width: 60ch;
+  font-size: 1.125rem;
+  color: $color-muted;
+  margin-bottom: $space-5;
+}
+
+.hero-actions {
+  display: flex;
+  gap: $space-3;
 }
