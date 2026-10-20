@@ -5,7 +5,15 @@
 // ==========================================================================
 
 .resume {
+  display: flex;
+  align-items: center;
   padding: $space-6 $space-4;
   max-width: $container-width;
   margin: 0 auto;
+
+    img {
+    width: 100%;
+    height: auto;
+    border: 1px solid $color-line;
+  }
 }
