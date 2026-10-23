@@ -30,10 +30,15 @@ jobs:
       - name: Compile SCSS
         run: npm run build
 
+      - name: Assemble site
+        run: |
+          mkdir _site
+          cp -r index.html css js assets _site/
+
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
   deploy:
     needs: build

@@ -12,7 +12,7 @@
   border: 1px solid $color-ink;
   border-radius: $radius;
   text-decoration: none;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 
   &:hover {
     background: $color-ink;
@@ -20,12 +20,16 @@
   }
 }
 
+// Filled accent with ink text: the brass accent on paper is only ~3:1 contrast,
+// too low for button text, but ink on brass clears 4.5:1.
 .btn--accent {
+  background: $color-accent;
   border-color: $color-accent;
-  color: $color-accent;
+  color: $color-ink;
 
   &:hover {
-    background: $color-accent;
+    background: $color-ink;
+    border-color: $color-ink;
     color: $color-paper;
   }
 }

@@ -5,17 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reuben Kuruvila — Portfolio</title>
   <meta name="description" content="Business analytics portfolio — dashboards, resume, and projects.">
+  <meta name="theme-color" content="#F4F5F1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Reuben Kuruvila — Portfolio">
+  <meta property="og:description" content="Business analytics portfolio — dashboards, resume, and projects.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%231B2430'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%23B8862E'%3ERK%3C/text%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-  <nav class="site-nav">
+  <nav class="site-nav" aria-label="Main">
     <a class="site-nav__name" href="#home">Reuben Kuruvila</a>
-    <ul class="site-nav__links">
+    <button class="site-nav__toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav-links">
+      <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+    </button>
+    <ul class="site-nav__links" id="site-nav-links">
       <li><a href="#dashboards">Dashboards</a></li>
       <li><a href="#resume">Resume</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#beyond-work">Beyond work</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -36,7 +49,7 @@
     <div class="dashboard-grid">
 
       <article class="dashboard-card">
-        <img src="assets/img/excel-superstore-dashboard.png" alt="Superstore Performance Dashboard in Excel, showing KPI cards, profit by sub-category, quarterly sales trend, and total regional sales">
+        <img src="assets/img/excel-superstore-dashboard.png" alt="Superstore Performance Dashboard in Excel, showing KPI cards, profit by sub-category, quarterly sales trend, and total regional sales" width="1484" height="749" loading="lazy">
         <h3>Superstore Sales Analysis</h3>
         <p class="text-muted">Excel &middot; 2014&ndash;2017</p>
         <p><strong>The question:</strong> Which regions and categories were underperforming, where the business was losing profit margin, and what was driving year-over-year sales trends.</p>
@@ -45,7 +58,7 @@
       </article>
 
       <article class="dashboard-card">
-        <img src="assets/img/powerbi-hr-attrition.png" alt="Power BI Employee Attrition dashboard, showing KPI cards, attrition by department and age group, and satisfaction/work-life balance breakdowns">
+        <img src="assets/img/powerbi-hr-attrition.png" alt="Power BI Employee Attrition dashboard, showing KPI cards, attrition by department and age group, and satisfaction/work-life balance breakdowns" width="1437" height="808" loading="lazy">
         <h3>Employee Attrition Analysis</h3>
         <p class="text-muted">Power BI &middot; IBM HR Analytics</p>
         <p><strong>The question:</strong> What&rsquo;s driving employee attrition, and where in the organization is it worst.</p>

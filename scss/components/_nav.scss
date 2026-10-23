@@ -1,14 +1,21 @@
 @use '../base/variables' as *;
 
 // ==========================================================================
-// Nav — name on the left, section links on the right
+// Nav — pinned to the top. Name on the left, section links on the right;
+// below $nav-collapse-at the links collapse behind a burger button.
 // ==========================================================================
 
+$nav-collapse-at: 760px;
+
 .site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: $space-3 $space-4;
+  background: $color-paper; // opaque, so content doesn't show through while scrolling
   border-bottom: 1px solid $color-line;
 }
 
@@ -30,9 +37,116 @@
     border-bottom: 2px solid transparent;
     transition: color 0.15s ease, border-color 0.15s ease;
 
-    &:hover {
+    &:hover,
+    &.is-active { // .is-active is set by js/main.js for the section in view
       color: $color-ink;
       border-color: $color-accent;
     }
+  }
+}
+
+// Burger button — hidden unless JS is running on a narrow screen (see below)
+.site-nav__toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid $color-line;
+  border-radius: $radius;
+  background: transparent;
+  color: $color-ink;
+  cursor: pointer;
+}
+
+// Three bars drawn with CSS: the middle bar plus ::before / ::after
+.site-nav__toggle-bar {
+  position: relative;
+  display: block;
+  width: 1.25rem;
+  height: 2px;
+  background: currentColor;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    transition: transform 0.2s ease;
+  }
+
+  &::before { top: -6px; }
+  &::after  { top: 6px; }
+}
+
+// Open state: the bars cross into an X
+.site-nav__toggle[aria-expanded='true'] .site-nav__toggle-bar {
+  background: transparent;
+
+  &::before { transform: translateY(6px) rotate(45deg); }
+  &::after  { transform: translateY(-6px) rotate(-45deg); }
+}
+
+// Keeps anchor jumps (and keyboard focus) from landing underneath the pinned nav
+html {
+  scroll-padding-top: 4rem;
+}
+
+@media (max-width: $nav-collapse-at) {
+  // Fallback without JS: name on top, links wrap onto a row below it
+  .site-nav {
+    flex-wrap: wrap;
+    padding: $space-2 $space-3;
+  }
+
+  .site-nav__links {
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    gap: $space-1 $space-3;
+    padding-top: $space-1;
+    font-size: 0.9375rem;
+  }
+
+  html {
+    scroll-padding-top: 7rem;
+  }
+
+  // With JS (html.js is set in <head>): collapse the links behind the burger
+  .js {
+    .site-nav__toggle {
+      display: inline-flex;
+    }
+
+    .site-nav__links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 0;
+      padding: $space-2 $space-3 $space-3;
+      background: $color-paper;
+      border-bottom: 1px solid $color-line;
+      font-size: 1rem;
+
+      a {
+        display: inline-block;
+        padding: $space-2 0;
+      }
+    }
+
+    .site-nav__toggle[aria-expanded='true'] + .site-nav__links {
+      display: flex;
+    }
+  }
+
+  html.js {
+    scroll-padding-top: 4rem;
   }
 }
