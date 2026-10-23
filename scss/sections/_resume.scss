@@ -1,19 +1,89 @@
 @use '../base/variables' as *;
 
 // ==========================================================================
-// Resume section — placeholder until final resume content lands
+// Resume section
 // ==========================================================================
 
 .resume {
-  display: flex;
-  align-items: center;
   padding: $space-6 $space-4;
   max-width: $container-width;
   margin: 0 auto;
 
-    img {
-    width: 100%;
-    height: auto;
-    border: 1px solid $color-line;
+  .section-title {
+    padding: 0;
+    margin-bottom: $space-4;
+  }
+}
+
+.resume-summary {
+  margin-bottom: $space-4;
+}
+
+.resume-block {
+  margin-top: $space-6;
+
+  h3 {
+    margin-bottom: $space-4;
+    padding-bottom: $space-2;
+    border-bottom: 1px solid $color-line;
+  }
+}
+
+.resume-entry {
+  margin-bottom: $space-5;
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: $space-1 $space-4;
+    margin-bottom: $space-2;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  ul {
+    margin: $space-2 0 0;
+    padding-left: $space-4;
+  }
+
+  li {
+    margin-bottom: $space-1;
+    max-width: $max-line-width;
+  }
+}
+
+.resume-meta,
+.resume-dates {
+  color: $color-muted;
+  font-size: 0.9375rem;
+}
+
+.resume-skills {
+  display: grid;
+  grid-template-columns: minmax(12rem, max-content) 1fr;
+  gap: $space-2 $space-4;
+  margin: 0;
+
+  dt {
+    font-weight: 600;
+  }
+
+  dd {
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .resume-skills {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    dd {
+      margin-bottom: $space-3;
+    }
   }
 }

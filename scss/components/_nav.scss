@@ -1,7 +1,7 @@
 @use '../base/variables' as *;
 
 // ==========================================================================
-// Nav — fill in once the page structure (sections/anchors) is finalized
+// Nav — name on the left, section links on the right
 // ==========================================================================
 
 .site-nav {
@@ -10,4 +10,29 @@
   justify-content: space-between;
   padding: $space-3 $space-4;
   border-bottom: 1px solid $color-line;
+}
+
+.site-nav__name {
+  font-family: $font-display;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.site-nav__links {
+  display: flex;
+  gap: $space-4;
+
+  a {
+    text-decoration: none;
+    color: $color-muted;
+    padding-bottom: $space-1;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+      color: $color-ink;
+      border-color: $color-accent;
+    }
+  }
 }

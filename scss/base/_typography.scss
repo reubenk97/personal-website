@@ -29,3 +29,10 @@ p {
 .text-muted {
   color: $color-muted;
 }
+
+// Section headings (Dashboards, Resume, Get in touch)
+.section-title {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: $space-6 $space-4 0;
+}

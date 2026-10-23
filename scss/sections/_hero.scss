@@ -25,5 +25,6 @@
 
 .hero-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: $space-3;
 }

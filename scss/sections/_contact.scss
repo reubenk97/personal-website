@@ -1,0 +1,26 @@
+@use '../base/variables' as *;
+
+// ==========================================================================
+// Contact — closing call to action
+// ==========================================================================
+
+.contact {
+  padding: $space-6 $space-4 $space-7;
+  max-width: $container-width;
+  margin: 0 auto;
+
+  .section-title {
+    padding: 0;
+    margin-bottom: $space-3;
+  }
+
+  p {
+    margin-bottom: $space-4;
+  }
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reuben — Portfolio</title>
+  <title>Reuben Kuruvila — Portfolio</title>
   <meta name="description" content="Business analytics portfolio — dashboards, resume, and projects.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -12,28 +12,27 @@
 <body>
 
   <nav class="site-nav">
-    <span>Reuben</span>
-    <!-- Nav links go here once sections/anchors are finalized -->
+    <a class="site-nav__name" href="#home">Reuben Kuruvila</a>
+    <ul class="site-nav__links">
+      <li><a href="#dashboards">Dashboards</a></li>
+      <li><a href="#resume">Resume</a></li>
+    </ul>
   </nav>
 
-  <!-- HERO
-       Analyst-focused highlight goes first, per the agreed structure. -->
+  <!-- HERO -->
   <section class="hero" id="home">
     <h1>Reuben Kuruvila</h1>
     <p class="hero-tagline">I turn messy data into decisions &mdash; dashboards in Excel, Power BI, and Tableau, built on a background spanning analytics, tax consulting, and software development.</p>
     <div class="hero-actions">
-      <a class="btn" href="#resume">Resume</a>
       <a class="btn btn--accent" href="#dashboards">View Dashboards</a>
+      <a class="btn" href="#resume">Resume</a>
+      <a class="btn" href="#contact">Get in touch</a>
     </div>
   </section>
 
-  <!-- RESUME -->
-  <section class="resume" id="resume">
-    <img src="assets/resume/Resume_Picture.png" alt="Reuben Kuruvila's Resume">
-  </section>
-
-  <!-- DASHBOARDS: Excel, Power BI, Tableau -->
+  <!-- DASHBOARDS: Excel, Power BI (Tableau to be added when finished) -->
   <section id="dashboards">
+    <h2 class="section-title">Dashboards</h2>
     <div class="dashboard-grid">
 
       <article class="dashboard-card">
@@ -49,7 +48,7 @@
         <img src="assets/img/powerbi-hr-attrition.png" alt="Power BI Employee Attrition dashboard, showing KPI cards, attrition by department and age group, and satisfaction/work-life balance breakdowns">
         <h3>Employee Attrition Analysis</h3>
         <p class="text-muted">Power BI &middot; IBM HR Analytics</p>
-        <p><strong>The question:</strong> What's driving employee attrition, and where in the organization is it worst.</p>
+        <p><strong>The question:</strong> What&rsquo;s driving employee attrition, and where in the organization is it worst.</p>
         <p><strong>The approach:</strong> Built a Power BI dashboard covering 1,470 employees, with slicers for department, age, gender, and job role. KPI cards tracked high-risk employees, attrition rate, and total attrited employees, backed by visuals breaking down attrition by department, age group, monthly income (active vs. attrited), satisfaction/work-life balance, and tenure.</p>
         <p><strong>The takeaway:</strong> Sales had the highest attrition rate of any department. Employees under 25 attrited at the highest rate of any age group. And the strongest pattern in the data: attrition was highest specifically where low job satisfaction and poor work-life balance overlapped.</p>
       </article>
@@ -57,10 +56,128 @@
     </div>
   </section>
 
+  <!-- RESUME -->
+  <section class="resume" id="resume">
+    <h2 class="section-title">Resume</h2>
+    <p class="resume-summary">Data-driven Business Analytics professional and MBA candidate with a track record of delivering over $50M in value through advanced data analysis, team leadership, and C-level stakeholder management. Combines deep technical fluency (Python, SQL, Power BI, Tableau) with core business strategy to optimize financial performance and operational workflows.</p>
+    <a class="btn" href="assets/resume/Kuruvila_Reuben_Resume.pdf" download>Download PDF</a>
+
+    <div class="resume-block">
+      <h3>Experience</h3>
+
+      <article class="resume-entry">
+        <header>
+          <div>
+            <h4>Property Management Advisor (Consulting)</h4>
+            <p class="resume-meta">Zuraj, LLC &middot; Houston, TX</p>
+          </div>
+          <p class="resume-dates">Aug 2023 &ndash; Present</p>
+        </header>
+        <ul>
+          <li>Perform financial analyses for a property portfolio to optimize net operating income and ensure regulatory compliance</li>
+          <li>Designed 5+ Power BI/Excel dashboards to track KPIs, including revenue streams, operating expenses, and yield optimization</li>
+          <li>Direct the tenant lifecycle, successfully leading and navigating lease negotiations, renewals, and dispute resolutions</li>
+          <li>Executed advanced technical upskilling (Coding Dojo Certificate) and MBA in Business Analytics concurrently with client work</li>
+        </ul>
+      </article>
+
+      <article class="resume-entry">
+        <header>
+          <div>
+            <h4>Implementation Consultant</h4>
+            <p class="resume-meta">alliantgroup, LP &middot; Houston, TX</p>
+          </div>
+          <p class="resume-dates">Jun 2022 &ndash; Jun 2023</p>
+        </header>
+        <ul>
+          <li>Managed a team of 5&ndash;6 data analysts, establishing data integrity controls and standardizing analytical workflows for consistency</li>
+          <li>Delivered over $50M in qualified tax credits to clients by executing complex technical data analyses under strict deadlines</li>
+          <li>Analyzed client financial and operational datasets using advanced Excel models to evaluate tax incentive eligibility routes</li>
+          <li>Maintained relationships with 150+ C-level executives and CPA partner firms, providing status reporting and advisory support</li>
+        </ul>
+      </article>
+
+      <article class="resume-entry">
+        <header>
+          <div>
+            <h4>Alarm Management Agent</h4>
+            <p class="resume-meta">Insite360 FuelQuest &middot; Houston, TX</p>
+          </div>
+          <p class="resume-dates">Jan 2020 &ndash; Oct 2020</p>
+        </header>
+        <ul>
+          <li>Prevented losses exceeding $100,000 per cleared incident by performing real-time risk analyses on gas station alarm systems</li>
+          <li>Utilized the proprietary inGauge system to diagnose, troubleshoot, and reconfigure system designs based on client requirements</li>
+          <li>Fostered cross-functional communication with internal teams, third-party services, and clients to streamline incident response times</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="resume-block">
+      <h3>Education</h3>
+
+      <article class="resume-entry">
+        <header>
+          <div>
+            <h4>MBA &ndash; Business Analytics (GPA: 3.9)</h4>
+            <p class="resume-meta">Texas Woman&rsquo;s University</p>
+          </div>
+          <p class="resume-dates">Expected Dec 2026</p>
+        </header>
+      </article>
+
+      <article class="resume-entry">
+        <header>
+          <div>
+            <h4>Software Development Certificate</h4>
+            <p class="resume-meta">Coding Dojo</p>
+          </div>
+          <p class="resume-dates">May 2024 &ndash; Aug 2024</p>
+        </header>
+      </article>
+
+      <article class="resume-entry">
+        <header>
+          <div>
+            <h4>BA &ndash; Economics; Business Foundations Program Certificate</h4>
+            <p class="resume-meta">The University of Texas at Austin</p>
+          </div>
+          <p class="resume-dates">Aug 2015 &ndash; Jun 2019</p>
+        </header>
+      </article>
+    </div>
+
+    <div class="resume-block">
+      <h3>Technical &amp; Professional Skills</h3>
+      <dl class="resume-skills">
+        <dt>Data Analysis &amp; Visualization</dt>
+        <dd>Advanced Microsoft Excel, Power BI, Tableau</dd>
+        <dt>Programming</dt>
+        <dd>Python, SQL, JavaScript, HTML/CSS, C#</dd>
+        <dt>Frameworks &amp; Tools</dt>
+        <dd>React, Flask, Bootstrap, ASP.NET, Node.js</dd>
+        <dt>Databases &amp; Platforms</dt>
+        <dd>MySQL, MongoDB, AWS, GitHub</dd>
+        <dt>Core Competencies</dt>
+        <dd>Project Management, Client Relations, Financial Analysis, Business Analysis, Team Leadership</dd>
+      </dl>
+    </div>
+  </section>
+
   <!-- OTHER PROJECTS: Unity/Blender, Line app, future additions -->
   <section id="projects">
     <div class="projects-grid">
       <!-- one project card per project -->
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2 class="section-title">Get in touch</h2>
+    <p>Open to data analyst and business analyst roles. Email is the fastest way to reach me.</p>
+    <div class="contact-actions">
+      <a class="btn btn--accent" href="mailto:reubenk97@gmail.com">reubenk97@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/reuben-kuruvila" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </section>
 
