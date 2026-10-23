@@ -1,0 +1,38 @@
+@use '../base/variables' as *;
+
+// ==========================================================================
+// "Beyond work" — short personal block: one photo, a few sentences
+// ==========================================================================
+
+.about {
+  padding: $space-6 $space-4;
+  max-width: $container-width;
+  margin: 0 auto;
+
+  .section-title {
+    padding: 0;
+    margin-bottom: $space-4;
+  }
+}
+
+.about-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: $space-5;
+}
+
+// Crops a tall portrait to head-and-shoulders without editing the file
+.about-photo {
+  width: 220px;
+  max-width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid $color-line;
+  border-radius: $radius;
+}
+
+.about-text {
+  flex: 1 1 20rem;
+}
