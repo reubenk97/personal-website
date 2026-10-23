@@ -1,70 +1,68 @@
-# Personal Website
+# Reuben Kuruvila — Portfolio Website
 
-Portfolio site: dashboards (Excel / Power BI, Tableau coming), resume, other
-projects (Unity game, Line app), and a short personal block.
+Source code for my personal portfolio site: business analytics dashboards,
+resume, and projects.
 
-## Structure
+**Live site:** https://reubenk97.github.io/personal-website/
+
+## What's on the site
+
+- **Dashboards** — interactive analytics work with write-ups of the question,
+  approach, and findings:
+  - *Superstore Sales Analysis* (Excel): regional and category performance,
+    profit margin, and year-over-year sales trends.
+  - *Employee Attrition Analysis* (Power BI): where attrition is highest and
+    what drives it, built on the IBM HR Analytics dataset.
+- **Resume** — experience, education, and skills, with a PDF download.
+- **Other projects** — software and game development work in progress.
+- **Contact** — email and LinkedIn.
+
+Both dashboards are built on public sample datasets (Superstore Sales and
+IBM HR Analytics from Kaggle), not on any employer or client data.
+
+## How it's built
+
+I wrote the site by hand rather than using a site builder, so the code itself
+is part of the portfolio.
+
+- **HTML, SCSS, and vanilla JavaScript** — no frameworks or UI libraries.
+- **SCSS** organized into partials (design tokens, base styles, components,
+  sections) and compiled with [Sass](https://sass-lang.com/).
+- **Responsive layout** with a pinned navigation bar, a mobile menu, and
+  highlighting of the section currently in view.
+- **Accessibility basics** — semantic markup, visible keyboard focus, text
+  contrast checked against the palette, and reduced-motion support.
+- **Progressive enhancement** — the page remains usable if JavaScript is off.
+- **Automated deployment** — GitHub Actions compiles the SCSS and publishes to
+  GitHub Pages on every push to `main`.
+
+## Project structure
 
 ```
 index.html
-scss/
-  main.scss           entry point — @use's every partial below in cascade order
-  base/
-    _variables.scss   design tokens (color, type, spacing)
-    _reset.scss
-    _typography.scss
-  components/
-    _nav.scss         pinned nav, burger menu below 760px
-    _buttons.scss
-  sections/
-    _hero.scss
-    _dashboards.scss
-    _resume.scss
-    _projects.scss
-    _about.scss       "Beyond work" block
-    _contact.scss
-css/                  compiled output (gitignored — built by CI, not committed)
-js/main.js            burger menu + highlights the nav link for the section in view
-assets/
-  img/                dashboard screenshots, headshot
-  resume/             resume PDF
+scss/       styles, split into base / components / sections partials
+js/         navigation behavior
+assets/     images and the resume PDF
+css/        compiled stylesheet (generated during the build, not committed)
 ```
 
-## Local development
+## Run it locally
+
+Requires [Node.js](https://nodejs.org/) (current LTS).
 
 ```bash
 npm install
-npm run watch     # recompiles css/main.css on every scss change
+npm run watch    # compiles scss/ to css/main.css and recompiles on change
 ```
 
-Open `index.html` directly in a browser, or serve the folder with any
-static server (e.g. `npx serve`).
+Then open `index.html` in a browser.
 
-## Deploying
+## Contact
 
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which installs
-dependencies, compiles the SCSS, and publishes the site to GitHub Pages
-automatically. Compiled CSS is never committed.
+- Email: reubenk97@gmail.com
+- LinkedIn: https://www.linkedin.com/in/reuben-kuruvila
 
-One-time setup in the GitHub repo settings: **Settings → Pages → Source →
-GitHub Actions**.
+## Usage
 
-All links and asset paths in the site are relative, so it works the same on
-`username.github.io/repo-name/` and on a custom domain.
-
-## Adding a new section or project
-
-1. Add a partial under `scss/sections/` (or `scss/components/` for reusable pieces).
-2. Start it with `@use '../base/variables' as *;` to get the design tokens.
-3. Add `@use 'sections/your-partial';` to `scss/main.scss`.
-4. Add the markup to `index.html` with a heading class of `section-title`.
-5. To list it in the nav, add `<li><a href="#your-id">…</a></li>` — the
-   highlight script finds the section from the link's `href`.
-
-## Maintenance notes
-
-- Node version: set in `.github/workflows/deploy.yml` (`node-version`). Use a
-  current LTS release and bump it when that release reaches end-of-life.
-- Keep `package-lock.json` committed so CI builds use the same Sass version.
-- Before adding photos, strip location/camera metadata (EXIF) and resize to
-  roughly 800px wide.
+The writing, screenshots, and resume are my own work. Please don't reuse them
+without asking.
